@@ -12,7 +12,8 @@
 					"Header": {
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Separators": {
 						"TopSectionSeparator": false,
@@ -64,7 +65,7 @@
 							"SubstatusText": "Discount"
 						}
 					},
-						"Search": {
+					"Search": {
 						"Enabled": true
 					},
 					"HighlightSelectedItem": false

@@ -12,7 +12,8 @@
 					"Header": {
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Separators": {
 						"TopSectionSeparator": false,
@@ -24,7 +25,8 @@
 					"Footer": {
 						"_Name": "SectionFooter0",
 						"Visible": true,
-						"UseBottomPadding": false
+						"UseBottomPadding": false,
+						"_Type": "SectionCommon.Type.Footer"
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"_Name": "SectionObjectTable0",
@@ -72,7 +74,8 @@
 					"Header": {
 						"_Name": "SectionHeader1",
 						"AccessoryType": "None",
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -129,7 +132,8 @@
 					"Header": {
 						"_Name": "SectionHeader2",
 						"AccessoryType": "None",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -179,7 +183,8 @@
 						"_Name": "SectionHeader3",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Stock Details"
+						"Caption": "Stock Details",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -203,7 +208,8 @@
 						"_Name": "SectionHeader4",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Dimensions"
+						"Caption": "Dimensions",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {

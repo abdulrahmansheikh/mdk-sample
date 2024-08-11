@@ -1,7 +1,7 @@
 {
 	"Controls": [
 		{
-			"_Type": "Control.Type.FormCellContainer",
+			"_Type": "Control.Type.SectionedTable",
 			"_Name": "FormCellContainer0",
 			"Sections": [
 				{
@@ -33,9 +33,9 @@
 							]
 						}
 					],
-					"_Name": "FormCellSection0",
-					"Caption": "Sort by",
-					"Visible": true
+					"_Name": "FormCellContainer0SectionFormCell0",
+					"Visible": true,
+					"_Type": "Section.Type.FormCell"
 				},
 				{
 					"Controls": [
@@ -85,9 +85,9 @@
 							}
 						}
 					],
-					"_Name": "FormCellSection1",
-					"Caption": "Filter By",
-					"Visible": true
+					"_Name": "FormCellContainer0SectionFormCell1",
+					"Visible": true,
+					"_Type": "Section.Type.FormCell"
 				}
 			]
 		}
@@ -98,21 +98,19 @@
 	"ActionBar": {
 		"Items": [
 			{
-				"Text": "Cancel",
 				"_Name": "ActionBarItem0",
-				"Caption": "",
+				"Caption": "Cancel",
 				"SystemItem": "Cancel",
-				"Position": "left",
+				"Position": "Left",
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action"
 			},
 			{
-				"Text": "Done",
 				"_Name": "ActionBarItem1",
-				"Caption": "",
+				"Caption": "Done",
 				"SystemItem": "Done",
-				"Position": "right",
+				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action"
@@ -122,7 +120,7 @@
 	},
 	"FioriToolbar": {
 		"_Name": "FioriToolbar",
-		"_Type": "Control.Type.FioriToolbar",		
+		"_Type": "Control.Type.FioriToolbar",
 		"Visible": true,
 		"Items": [
 			{
@@ -142,5 +140,6 @@
 		"#Page:Product_Filter/#Control:SortBy/#Value",
 		"#Page:Product_Filter/#Control:CategoryFilter/#FilterValue",
 		"#Page:Product_Filter/#Control:PromoFilter/#Value"
-	]
+	],
+	"PrefersLargeCaption": true
 }

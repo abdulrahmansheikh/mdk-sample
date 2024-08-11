@@ -19,7 +19,8 @@
 					"Header": {
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -141,7 +142,8 @@
 						},
 						"_Name": "SectionGridHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Row": {
 						"Items": [

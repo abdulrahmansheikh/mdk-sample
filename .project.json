@@ -1,0 +1,20 @@
+{
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=purchase_order_mdk_application&ClientId=&ServerUrl=https://7b81b789trial-dev-purchase-order-mdk-application.cfapps.us10-001.hana.ondemand.com&SapCloudPlatformEndpoint=https://7b81b789trial-dev-purchase-order-mdk-application.cfapps.us10-001.hana.ondemand.com&AuthorizationEndpointUrl=&RedirectUrl=&TokenUrl=&multiUser=false"
+	},
+	"CF": {
+		"Target": "https://api.cf.us10-001.hana.ondemand.com",
+		"Organization": "69d71108-8f01-46cf-ad04-d6ca5c602e77",
+		"Space": "b25a0f14-b6ce-434e-8ca0-cb37b415124f"
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/69d71108-8f01-46cf-ad04-d6ca5c602e77/space/b25a0f14-b6ce-434e-8ca0-cb37b415124f",
+		"AppId": "purchase_order_mdk_application",
+		"Destination": [
+			"com.sap.edm.sampleservice.v4"
+		]
+	}
+}

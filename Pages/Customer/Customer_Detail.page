@@ -84,11 +84,13 @@
 						"FooterStyle": "Attribute",
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_SalesOrders.action",
 						"UseBottomPadding": false,
-						"Visible": true
+						"Visible": true,
+						"_Type": "SectionCommon.Type.Footer"
 					},
 					"Header": {
 						"Caption": "Sales Orders",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"HighlightSelectedItem": false,
 					"MaxItemCount": 4,

@@ -52,11 +52,13 @@
 						"FooterStyle": "Attribute",
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_List.action",
 						"UseBottomPadding": true,
-						"Visible": true
+						"Visible": true,
+						"_Type": "SectionCommon.Type.Footer"
 					},
 					"Header": {
 						"Caption": "Top Customers",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Layout": {
 						"NumberOfColumns": 2
@@ -100,11 +102,13 @@
 						"FooterStyle": "Attribute",
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_List.action",
 						"UseBottomPadding": false,
-						"Visible": true
+						"Visible": true,
+						"_Type": "SectionCommon.Type.Footer"
 					},
 					"Header": {
 						"Caption": "Promotion Items",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Layout": {
 						"NumberOfColumns": 2

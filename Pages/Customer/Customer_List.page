@@ -33,7 +33,8 @@
 						"FooterVisible": false
 					},
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Search": {
 						"Enabled": true,
