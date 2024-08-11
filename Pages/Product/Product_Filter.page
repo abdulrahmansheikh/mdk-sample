@@ -1,0 +1,146 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"AllowMultipleSelection": true,
+							"_Type": "Control.Type.FormCell.Sorter",
+							"_Name": "SortBy",
+							"IsVisible": true,
+							"AllowEmptySelection": false,
+							"IsEditable": true,
+							"SortByItems": [
+								{
+									"DisplayValue": "Name",
+									"ReturnValue": "Name"
+								},
+								{
+									"DisplayValue": "Category",
+									"ReturnValue": "CategoryName"
+								},
+								{
+									"DisplayValue": "Price (Low to High)",
+									"ReturnValue": "Price asc"
+								},
+								{
+									"DisplayValue": "Price (High to Low)",
+									"ReturnValue": "Price desc"
+								}
+							]
+						}
+					],
+					"_Name": "FormCellSection0",
+					"Caption": "Sort by",
+					"Visible": true
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Filter",
+							"_Name": "PromoFilter",
+							"IsVisible": true,
+							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
+							"Caption": "Products",
+							"IsEditable": true,
+							"FilterProperty": [
+								{
+									"DisplayValue": "On Promotion",
+									"ReturnValue": "/MDKDemoApp/Rules/Product/ProductOnPromoFilter.js"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "CategoryFilter",
+							"IsVisible": true,
+							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
+							"Caption": "Category",
+							"DataPaging": {
+								"LoadingIndicatorText": "",
+								"ShowLoadingIndicator": true
+							},
+							"PickerPrompt": "Please select multiple items",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": true,
+							"IsEditable": true,
+							"FilterProperty": "CategoryName",
+							"Search": {
+								"Enabled": true
+							},
+							"PickerItems": {
+								"DisplayValue": "{CategoryName}",
+								"ReturnValue": "{CategoryName}",
+								"Target": {
+									"EntitySet": "ProductCategories",
+									"Service": "/MDKDemoApp/Services/Sample.service"
+								}
+							}
+						}
+					],
+					"_Name": "FormCellSection1",
+					"Caption": "Filter By",
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Product_Filter",
+	"Caption": "Filter",
+	"ActionBar": {
+		"Items": [
+			{
+				"Text": "Cancel",
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action"
+			},
+			{
+				"Text": "Done",
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Done",
+				"Position": "right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",		
+		"Visible": true,
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ResetAllBtn",
+				"Visible": true,
+				"Title": "Reset All",
+				"OnPress": "/MDKDemoApp/Rules/Product/ResetFilter.js",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	},
+	"Result": [
+		"#Page:Product_Filter/#Control:SortBy/#Value",
+		"#Page:Product_Filter/#Control:CategoryFilter/#FilterValue",
+		"#Page:Product_Filter/#Control:PromoFilter/#Value"
+	]
+}

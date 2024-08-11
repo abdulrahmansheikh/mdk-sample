@@ -1,0 +1,224 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{SalesOrderID}",
+							"_Name": "KeyValue0",
+							"KeyName": "Order Number",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Header": {
+						"_Name": "SectionHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": false
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "$(DT,{CreatedAt})",
+							"_Name": "KeyValue1",
+							"KeyName": "Created At",
+							"Visible": true
+						},
+						{
+							"Value": "{LifeCycleStatusName}",
+							"_Name": "KeyValue2",
+							"KeyName": "Status",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue2",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"_Name": "KeyValue3",
+							"KeyName": "Price",
+							"Visible": true
+						},
+						{
+							"Value": "$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"_Name": "KeyValue4",
+							"KeyName": "Tax",
+							"Visible": true
+						},
+						{
+							"Value": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"_Name": "KeyValue5",
+							"KeyName": "Total",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue1",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"NumberOfColumns": 3
+					}
+				},
+				{
+					"Header": {
+						"Grid": {
+							"Items": [
+								{
+									"NumberOfLines": 1,
+									"Text": "Product",
+									"TextAlignment": "Left"
+								},
+								{
+									"NumberOfLines": 1,
+									"Text": "Qty",
+									"TextAlignment": "Right"
+								},
+								{
+									"NumberOfLines": 1,
+									"Text": "Price",
+									"TextAlignment": "Right"
+								},
+								{
+									"NumberOfLines": 1,
+									"Text": "Tax",
+									"TextAlignment": "Right"
+								},
+								{
+									"NumberOfLines": 1,
+									"Text": "Total",
+									"TextAlignment": "Right"
+								}
+							]
+						},
+						"_Name": "SectionGridHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true
+					},
+					"Row": {
+						"Items": [
+							{
+								"BindTo": "Headline",
+								"LineBreakMode": "WordWrapping",
+								"NumberOfLines": 1,
+								"Text": "{Product/Name}",
+								"TextAlignment": "Left"
+							},
+							{
+								"BindTo": "Status",
+								"LineBreakMode": "WordWrapping",
+								"NumberOfLines": 1,
+								"Text": "{Quantity} {QuantityUnit}",
+								"TextAlignment": "Right"
+							},
+							{
+								"LineBreakMode": "WordWrapping",
+								"NumberOfLines": 1,
+								"Text": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+								"TextAlignment": "Right"
+							},
+							{
+								"LineBreakMode": "WordWrapping",
+								"NumberOfLines": 1,
+								"Text": "$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+								"TextAlignment": "Right"
+							},
+							{
+								"BindTo": "SubStatus",
+								"LineBreakMode": "WordWrapping",
+								"NumberOfLines": 1,
+								"Text": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+								"TextAlignment": "Right"
+							}
+						],
+						"Layout": {
+							"ColumnWidthPercentage": [
+								-1,
+								0.15,
+								0.18,
+								0.15,
+								0.18
+							]
+						},
+						"AccessoryType": "DisclosureIndicator",
+						"OnPress": "/MDKDemoApp/Rules/SalesOrder/ShowSalesOrder_Item_Product.js"
+					},
+					"_Type": "Section.Type.GridTable",
+					"Target": {
+						"EntitySet": "SalesOrderItems",
+						"QueryOptions": "$expand=Product&$filter=SalesOrderID eq {SalesOrderID}&$orderby=ItemNumber,ProductID",
+						"Service": "/MDKDemoApp/Services/Sample.service"
+					},
+					"_Name": "SectionGridTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					}
+				}
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SalesOrder_Detail",
+	"Caption": "Order Detail",
+	"PrefersLargeCaption": true
+}

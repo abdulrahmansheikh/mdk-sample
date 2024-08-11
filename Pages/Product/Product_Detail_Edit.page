@@ -1,0 +1,183 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"IsIconCircular": false,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action",
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"Caption": "Cancel"
+			},
+			{
+				"IsIconCircular": false,
+				"OnPress": "/MDKDemoApp/Actions/Product/UpdateProductDetails.action",
+				"Position": "Right",
+				"SystemItem": "Done",
+				"Caption": "Done"
+			}
+		]
+	},
+	"Caption": "Edit Product",
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Caption": "ID",
+							"IsEditable": false,
+							"IsVisible": false,
+							"KeyboardType": "DateTime",
+							"PlaceHolder": "value",
+							"Value": "{ProductID}",
+							"_Name": "ProductID",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Name",
+							"IsEditable": true,
+							"IsVisible": true,
+							"KeyboardType": "DateTime",
+							"PlaceHolder": "value",
+							"Value": "{Name}",
+							"_Name": "ProductName",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Description",
+							"IsEditable": true,
+							"IsVisible": true,
+							"PlaceHolder": "Description",
+							"Value": "{ShortDescription}",
+							"_Name": "ProductDescription",
+							"_Type": "Control.Type.FormCell.Note"
+						},
+						{
+							"AllowEmptySelection": true,
+							"AllowMultipleSelection": false,
+							"Caption": "Category",
+							"IsBarcodeScanEnabled": true,
+							"IsEditable": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"IsSearchEnabled": false,
+							"IsSelectedSectionEnabled": true,
+							"IsVisible": true,
+							"PickerItems": {
+								"DisplayValue": "{CategoryName}",
+								"ReturnValue": "{CategoryName}",
+								"Target": {
+									"EntitySet": "ProductCategories",
+									"QueryOptions": "$orderby=CategoryName",
+									"Service": "/MDKDemoApp/Services/Sample.service"
+								}
+							},
+							"PickerPrompt": "Please select one single item",
+							"Search": {
+								"Enabled": true,
+								"Placeholder": "Category Search"
+							},
+							"Value": [
+								"{CategoryName}"
+							],
+							"_Name": "ProductCategory",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						},
+						{
+							"Caption": "Price",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Value": "{Price}",
+							"_Name": "ProductPrice",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Currency",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Value": "{CurrencyCode}",
+							"_Name": "ProductCurrencyCode",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					],
+					"Visible": true,
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell0"
+				},
+				{
+					"Controls": [
+						{
+							"Caption": "Height",
+							"IsEditable": true,
+							"IsVisible": true,
+							"KeyboardType": "DateTime",
+							"Value": "{DimensionHeight}",
+							"_Name": "ProductHeight",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Width",
+							"IsEditable": true,
+							"IsVisible": true,
+							"KeyboardType": "DateTime",
+							"Value": "{DimensionWidth}",
+							"_Name": "ProductWidth",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Depth",
+							"IsEditable": true,
+							"IsVisible": true,
+							"KeyboardType": "DateTime",
+							"Value": "{DimensionDepth}",
+							"_Name": "ProductDepth",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Unit",
+							"IsEditable": true,
+							"IsVisible": true,
+							"KeyboardType": "DateTime",
+							"Value": "{DimensionUnit}",
+							"_Name": "ProductDimensionUnit",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					],
+					"Visible": true,
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell1"
+				},
+				{
+					"Controls": [
+						{
+							"Caption": "Weight",
+							"IsEditable": true,
+							"IsVisible": true,
+							"KeyboardType": "DateTime",
+							"Value": "{Weight}",
+							"_Name": "ProductWeight",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Unit",
+							"IsEditable": true,
+							"IsVisible": true,
+							"KeyboardType": "DateTime",
+							"Value": "{WeightUnit}",
+							"_Name": "ProductWeightUnit",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					],
+					"Visible": true,
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell2"
+				}
+			],
+			"_Name": "FormCellContainer0"
+		}
+	],
+	"_Name": "Product_Detail_Edit",
+	"_Type": "Page",
+	"PrefersLargeCaption": true
+}
