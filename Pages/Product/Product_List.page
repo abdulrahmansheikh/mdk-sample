@@ -10,13 +10,13 @@
 			"Sections": [
 				{
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": false,
-						"_Type": "SectionCommon.Type.Header"
+						"UseTopPadding": false
 					},
 					"Separators": {
-						"TopSectionSeparator": false,
+						"TopSectionSeparator": true,
 						"BottomSectionSeparator": true,
 						"HeaderSeparator": true,
 						"FooterSeparator": true,
@@ -37,16 +37,26 @@
 						"ContextMenu": {
 							"Items": [],
 							"PerformFirstActionWithFullSwipe": true,
-							"LeadingItems": [],
+							"LeadingItems": [
+								"{SupplierID}"
+							],
 							"TrailingItems": []
 						},
 						"Title": "{Name}",
 						"Subhead": "{CategoryName}",
+						"Description": "dsf",
+						"DisplayDescriptionInMobile": true,
 						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
 						"SubstatusText": "/MDKDemoApp/Rules/Product/GetPromoDiscount.js",
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "None",
-						"Tags": [],
+						"ProgressIndicator": "Open",
+						"Tags": [
+							{
+								"Color": "Red",
+								"Text": "{DimensionUnit}"
+							}
+						],
 						"AvatarStack": {
 							"Avatars": [
 								{
@@ -60,10 +70,10 @@
 							"ImageIsCircular": true
 						},
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
-						"Selected": false,
 						"Styles": {
 							"SubstatusText": "Discount"
-						}
+						},
+						"Selected": false
 					},
 					"Search": {
 						"Enabled": true

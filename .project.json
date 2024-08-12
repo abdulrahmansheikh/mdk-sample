@@ -7,14 +7,38 @@
 	"CF": {
 		"Target": "https://api.cf.us10-001.hana.ondemand.com",
 		"Organization": "69d71108-8f01-46cf-ad04-d6ca5c602e77",
-		"Space": "b25a0f14-b6ce-434e-8ca0-cb37b415124f"
+		"Space": "b25a0f14-b6ce-434e-8ca0-cb37b415124f",
+		"Deploy": {
+			"Description": "",
+			"WebClient": {
+				"Runtime": "production",
+				"URL": "https://mdk-webclient-runtime.cfapps.us10.hana.ondemand.com/runtime/"
+			},
+			"Destination": [
+				{
+					"CF": "SampleServiceV4",
+					"MDK": "SampleServiceV4",
+					"URL": ""
+				}
+			],
+			"Name": "ns.MDKDemoApp",
+			"Version": "1.0.0",
+			"AppRouter": "standalone",
+			"Auth": true,
+			"URL": "https://7b81b789trial-dev-nsmdkdemoapp-approuter.cfapps.us10-001.hana.ondemand.com/nsMDKDemoApp"
+		}
 	},
 	"MobileService": {
 		"Type": "standard",
 		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/69d71108-8f01-46cf-ad04-d6ca5c602e77/space/b25a0f14-b6ce-434e-8ca0-cb37b415124f",
-		"AppId": "purchase_order_mdk_application",
+		"AppId": "com.sap.mdk.demo",
 		"Destination": [
-			"com.sap.edm.sampleservice.v4"
+			"SampleServiceV4"
 		]
+	},
+	"Build": {
+		"SourceMap": true,
+		"TSTarget": "es6",
+		"WMF": true
 	}
 }
